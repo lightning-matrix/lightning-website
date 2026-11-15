@@ -1168,7 +1168,7 @@ PRIVACY_BODY = """
 <p>Lightning is a general-purpose messaging client and is not directed at children.</p>
 
 <h2>Changes and contact</h2>
-<p>The policy is versioned in the repository beside the code it describes. Questions: Rokas Smetonis, <a href="mailto:antrasrokas@gmail.com">antrasrokas@gmail.com</a>, or the source repository on <a href="https://github.com/Mizerd/lightning">GitHub</a> or <a href="https://gitlab.com/lightning-matrix/lightning">GitLab</a>.</p>
+<p>The policy is versioned in the repository beside the code it describes. Questions: <a href="mailto:contact@lightning-matrix.org">contact@lightning-matrix.org</a>, or the source repository on <a href="https://github.com/Mizerd/lightning">GitHub</a> or <a href="https://gitlab.com/lightning-matrix/lightning">GitLab</a>.</p>
 """
 
 
@@ -1384,6 +1384,7 @@ def build():
       <span class="lg-srcs"><a href="{GITHUB_URL}">GitHub</a><a href="{GITLAB_URL}">GitLab</a><span class="lg-mirror">mirrors</span></span>
       <a href="{RELEASES_URL}">Releases</a>
       <a href="/privacy">Privacy</a>
+      <a href="mailto:contact@lightning-matrix.org">Contact</a>
       <a href="https://github.com/Mizerd/lightning/issues">Issues</a>
       <a href="https://matrix.org/">What is Matrix?</a>
     </div>
