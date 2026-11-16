@@ -291,8 +291,8 @@
   ],
   "support": {
     "title": "Say hello",
-    "blurb": "A chill space for anyone using Lightning or curious about it. Bugs and questions both welcome — here or in the issue tracker.",
-    "alias": "#lightning:matrix.smetonis.net",
-    "url": "https://matrix.to/#/%23lightning%3Amatrix.smetonis.net"
+    "blurb": "A chill space for anyone using Lightning or curious about it, with announcements, general chat and a support room. Bugs and questions both welcome — there or in the issue tracker.",
+    "alias": "#lightning-community:matrix.smetonis.net",
+    "url": "https://matrix.to/#/%23lightning-community%3Amatrix.smetonis.net"
   }
 }
