@@ -37,7 +37,7 @@ OUT = os.path.join(ROOT, "public")
 SITE_URL = "https://www.lightning-matrix.org"
 # The project's one public repository. Named here because the JSON-LD below
 # has to point at the same place correction 1 rewrites every link to.
-REPO_URL = "https://github.com/Mizerd/lightning"
+REPO_URL = "https://github.com/lightning-matrix/lightning"
 
 raw = open(SRC, encoding="utf-8").read()
 
@@ -290,7 +290,7 @@ doc = expand(doc, values)
 # card, so another button would only repeat them. The Contribute card offered
 # the two repositories side by side; the GitLab one goes the same way.
 doc, _n = re.subn(
-    r'\s*<a href="https://gitlab\.smetonis\.net/Mizerd/lightning"[^>]*>'
+    r'\s*<a href="https://gitlab\.smetonis\.net/lightning-matrix/lightning"[^>]*>'
     r'GitLab \(canonical\)</a>', "", doc, count=1, flags=re.S)
 if _n != 1:
     raise SystemExit("GitLab repository button not found")
@@ -326,8 +326,8 @@ for _before, _after in _edits:
 
 # What is left is plain repository links: the nav's "Source" and the hero's
 # "Read the source". Correction 2 below relies on this having already run.
-doc = doc.replace("https://gitlab.smetonis.net/Mizerd/lightning",
-                  "https://github.com/Mizerd/lightning")
+doc = doc.replace("https://gitlab.smetonis.net/lightning-matrix/lightning",
+                  "https://github.com/lightning-matrix/lightning")
 
 if "gitlab" in doc.lower():
     raise SystemExit("a GitLab reference survived the rewrite")
@@ -585,8 +585,8 @@ doc = doc.replace(_after_cols, _macos + _after_cols, 1)
 #    already use. The bare repository URL here is what correction 1 left
 #    behind; this must run after that sweep, not before it.
 doc = doc.replace(
-    '<a href="https://github.com/Mizerd/lightning">docs/build-and-test.md</a>',
-    '<a href="https://github.com/Mizerd/lightning/blob/main/docs/build-and-test.md">'
+    '<a href="https://github.com/lightning-matrix/lightning">docs/build-and-test.md</a>',
+    '<a href="https://github.com/lightning-matrix/lightning/blob/main/docs/build-and-test.md">'
     'docs/build-and-test.md</a>', 1)
 
 # 5. The verify box tells you to run sha256sum against SHA256SUMS but gave you
@@ -1465,7 +1465,7 @@ def _mark(cls, want):
 _mark("lg-nav", lambda a: "<nav" == "<nav" and "display: flex" in a and "gap: 28px" in a
       and "max-width: 1180px" in a and "padding: 14px 32px" in a)
 _NAVLINKS = ("#different", "#screenshots", "#features", "#privacy",
-             "github.com/Mizerd/lightning\"")
+             "github.com/lightning-matrix/lightning\"")
 _mark("lg-navlink", lambda a: 'font-size: 14px; font-weight: 500; color: #93a0b1;' in a
       and any(h in a for h in _NAVLINKS))
 
@@ -1520,7 +1520,7 @@ helmet = re.sub(r'<link rel="preconnect"[^>]*>\s*', "", helmet)
 body = re.search(r"<x-dc>(.*?)</x-dc>", doc, re.S).group(1)
 
 # Structured data. This exists for one reason: Google had already picked
-# https://github.com/Mizerd/lightning as the canonical page for this content,
+# https://github.com/lightning-matrix/lightning as the canonical page for this content,
 # because the domain used to redirect there and a redirect is the strongest
 # duplicate signal there is. The self-referencing <link rel="canonical">
 # below says "this URL is the original". `sameAs` says the rest of it: the

@@ -54,7 +54,7 @@ async function run(apiUp) {
     if (url === "/api/latest" && apiUp)
       return Promise.resolve({ ok: true, json: () => Promise.resolve({
         version: "9.9.9", released: "2026-08-21",
-        release_url: "https://github.com/Mizerd/lightning/releases/tag/v9.9.9",
+        release_url: "https://github.com/lightning-matrix/lightning/releases/tag/v9.9.9",
         assets: [] }) });
     return Promise.reject(new Error("down"));
   };

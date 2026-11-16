@@ -1,6 +1,6 @@
 # lightning-website
 
-The official website for [Lightning](https://github.com/Mizerd/lightning),
+The official website for [Lightning](https://github.com/lightning-matrix/lightning),
 a native Matrix desktop client for Linux, Windows and macOS.
 
 Live at **https://www.lightning-matrix.org**, hosted on Cloudflare Workers.
@@ -85,9 +85,9 @@ Run it **after** the release publishes. Before that there is nothing to read.
 {
   "version":  "0.8.1",
   "released": "2026-09-01",          // ISO date, shown as "Released ..."
-  "releases_url": "https://github.com/Mizerd/lightning/releases",
+  "releases_url": "https://github.com/lightning-matrix/lightning/releases",
   "donate_url":   "",                // empty hides the Donate button
-  "asset_url": "https://github.com/Mizerd/lightning/releases/download/v${version}/${file}",
+  "asset_url": "https://github.com/lightning-matrix/lightning/releases/download/v${version}/${file}",
   "packages": [
     { "os": "linux", "label": "...", "format": ".deb",
       "file": "lightning_0.8.1_amd64.deb",
@@ -104,7 +104,7 @@ commit sha, so they change every release — copy them from the GitHub release
 page rather than editing by hand:
 
 ```sh
-gh release view v0.8.1 --repo Mizerd/lightning --json assets \
+gh release view v0.8.1 --repo lightning-matrix/lightning --json assets \
   --jq '.assets[].name'
 ```
 
@@ -384,7 +384,7 @@ fold.
 ## Source mirrors
 
 The site links to the two public mirrors of the source, GitHub
-(`Mizerd/lightning`) and gitlab.com (`lightning-matrix/lightning`), side by
+(`lightning-matrix/lightning`) and gitlab.com (`lightning-matrix/lightning`), side by
 side wherever it points at the source. Releases, downloads and issues stay on
 GitHub. The project was on a self-hosted GitLab when the artifact was written,
 so `unbundle.py` rewrote every link, button and sentence that referred to it
@@ -555,7 +555,7 @@ element.
 
 ## Search engines
 
-Google had already picked **`https://github.com/Mizerd/lightning`** as the
+Google had already picked **`https://github.com/lightning-matrix/lightning`** as the
 canonical page for this content. That is not a mistake on its part: the domain
 used to redirect there, and a redirect is the strongest duplicate signal there
 is. The fix is to say the opposite, in every way a crawler reads:
@@ -587,7 +587,7 @@ blank box.
 GitHub API): the repository's homepage is `https://www.lightning-matrix.org`
 and its description now leads with the site before mentioning the mirror. They
 were the reason Google treated the GitHub page as canonical. Nothing here can
-verify them on an ongoing basis — `curl -s https://api.github.com/repos/Mizerd/lightning`
+verify them on an ongoing basis — `curl -s https://api.github.com/repos/lightning-matrix/lightning`
 is the check, and it is worth repeating if search results ever drift back.
 
 ## The sky

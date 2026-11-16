@@ -38,7 +38,7 @@ const FLATHUB_VERIFIED_BODY =
   "org.lightning_matrix.Lightning\n" +
   "ad0eb57e-fb3c-4ab1-9fc0-3fb3c7a42e1b\n";
 
-const REPO = "Mizerd/lightning";
+const REPO = "lightning-matrix/lightning";
 const UPSTREAM = `https://api.github.com/repos/${REPO}/releases/latest`;
 
 // GitHub rejects API requests without a User-Agent.

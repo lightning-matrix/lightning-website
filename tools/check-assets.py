@@ -27,7 +27,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(HERE, "..", "public")
-REPO = "Mizerd/lightning"
+REPO = "lightning-matrix/lightning"
 
 errors = []
 

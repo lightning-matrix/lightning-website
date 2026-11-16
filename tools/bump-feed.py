@@ -40,7 +40,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 PUB = os.path.join(HERE, "..", "public")
 FEED = os.path.join(PUB, "releases.json")
-REPO = "Mizerd/lightning"
+REPO = "lightning-matrix/lightning"
 
 
 def github_release(tag):
